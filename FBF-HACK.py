@@ -4,6 +4,7 @@
 #Running on python3
 #Use help command for display help menu
 #For execute script use this command in terminal 'python3 FBF-HACK.py' not './FBF-HACK.py'
+#can execute on linux and windows machine
 
 from sys import version
 pyversion = version
